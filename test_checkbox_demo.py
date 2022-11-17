@@ -91,6 +91,12 @@ class MultipleCheckboxDemo(unittest.TestCase):
         self.assertEqual(button_text, "Check All")
 
 
+    def test_if_all_checkboxes_on_website_can_be_selected_and_displays_correctly(self):
+        self.driver.find_element(By.ID, "isAgeSelected").click()
+        for i in self.list_of_checkboxes:
+            i.click()
+        button_text = self.driver.find_element(By.ID, "check1").get_attribute("value")
+        self.assertEqual(button_text, "Uncheck All")
 
     def tearDown(self):
         self.driver.quit()
