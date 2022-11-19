@@ -15,11 +15,9 @@ class SimpleCheckboxDemo(unittest.TestCase):
         self.driver.find_element(By.XPATH, '//*[@id="basic"]/div/a[2]').click()
         time.sleep(0.5)
 
-
     def test_message_is_not_displayed_until_click(self):
         is_message_displayed = self.driver.find_element(By.ID, "txtAge").is_displayed()
         self.assertEqual(is_message_displayed, False)  # message should not be displayed
-
 
     def test_checkbox_display_message(self):
         self.driver.find_element(By.ID, "isAgeSelected").click()
@@ -77,11 +75,10 @@ class MultipleCheckboxDemo(unittest.TestCase):
         for i in range(len(self.list_of_checkboxes)):
             self.list_of_checkboxes[i].click()
             button_text = self.driver.find_element(By.ID, "check1").get_attribute("value")
-            if i+1 != len(self.list_of_checkboxes):
+            if i + 1 != len(self.list_of_checkboxes):
                 self.assertEqual(button_text, "Check All")
             else:
                 self.assertEqual(button_text, "Uncheck All")
-
 
     def test_if_unchecking_one_box_changing_button_value(self):
         self.driver.find_element(By.ID, "check1").click()
@@ -89,7 +86,6 @@ class MultipleCheckboxDemo(unittest.TestCase):
         self.list_of_checkboxes[0].click()
         button_text = self.driver.find_element(By.ID, "check1").get_attribute("value")
         self.assertEqual(button_text, "Check All")
-
 
     def test_if_all_checkboxes_on_website_can_be_selected_and_displays_correctly(self):
         self.driver.find_element(By.ID, "isAgeSelected").click()
@@ -100,7 +96,6 @@ class MultipleCheckboxDemo(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
-
 
 
 if __name__ == '__main__':
