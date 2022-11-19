@@ -6,4 +6,5 @@
 <ul>
   <li>Simple Form Demo</li>
   <li>Checkbox Demo</li> 
+  <li>Radio Buttons Demo</li> 
 </ul>
