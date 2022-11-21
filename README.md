@@ -9,4 +9,5 @@
   <li>Checkbox Demo</li> 
   <li>Radio Buttons Demo</li> 
   <li>Select Dropdown List</li>
+  <li>Javascript Alerts</li>
 </ul>
